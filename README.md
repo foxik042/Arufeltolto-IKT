@@ -17,3 +17,4 @@ Ezt a böngészőt használtuk a teszteléshez és adatbázis felhasználói fel
 # 3 Tervezett funkciók
 
 # 4 Front és backend logika tervei (folyamat ábra)
+.
