@@ -22,4 +22,3 @@ Ez egy vállalatirányítási rendszer része, amely nyilvántartja a termékek 
 Ez a fizikai készlet, amely egy adott helyen tárolt árukat foglalja magában. A raktárkészlet állapotát rendszeresen ellenőrizzük és frissítjük, hogy biztosítsuk a folyamatos ellátást és elkerüljük a hiányt vagy a felesleget. 
 
 # 4 Front és backend logika tervei (folyamat ábra)
-.
