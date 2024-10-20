@@ -15,6 +15,11 @@ Ezt használtuk a backend-ben a programozás elvégzéséhez.
 Ezt a böngészőt használtuk a teszteléshez és adatbázis felhasználói felületének eléréséhez.
 
 # 3 Tervezett funkciók
+## 3.1 Árukészlet kezelő szoftver
+Ez egy vállalatirányítási rendszer része, amely nyilvántartja a termékek mennyiségét, elhelyezkedését és értékét. Segítségével nyomon követhető az áruk beérkezése, tárolása és kiszállítása.
+
+## 3.2 Raktárkészlet
+Ez a fizikai készlet, amely egy adott helyen tárolt árukat foglalja magában. A raktárkészlet állapotát rendszeresen ellenőrizzük és frissítjük, hogy biztosítsuk a folyamatos ellátást és elkerüljük a hiányt vagy a felesleget. 
 
 # 4 Front és backend logika tervei (folyamat ábra)
 .
