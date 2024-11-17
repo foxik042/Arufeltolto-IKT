@@ -2,7 +2,7 @@
 * {
 	font-family: Arial, sans-serif;
 }
-/* animált háttér */
+/* animált háttér mert az mindenhova kell */
 body {
 	background: linear-gradient(-45deg, #0A369D, #4472CA, #5E7CE2, #92B4F4);
 	background-size: 400% 400%;
