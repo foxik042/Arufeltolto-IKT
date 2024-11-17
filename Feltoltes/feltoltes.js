@@ -1,3 +1,5 @@
+//
+
 document.getElementById('add-product-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -41,7 +43,7 @@ document.getElementById('add-product-form').addEventListener('submit', function(
 
         const productDetails = document.createElement('p');
         productDetails.classList.add('card-text');
-        productDetails.textContent = `Ár: ${price} HUF | Mennyiség: ${quantity}`;
+        productDetails.textContent = `Ár: ${price} HUF | Mennyiség: ${quantity} db`;
         cardBody.appendChild(productDetails);
 
         card.appendChild(cardBody);

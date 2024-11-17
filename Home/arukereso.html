@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="hu">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../Feltoltes/style.css">
+    <title>Árukereső</title>
+    <style>
+        .btn-custom {
+            background-color: #007bff; 
+            color: white; 
+            border: none; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            transition: background-color 0.3s, transform 0.2s; 
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3; 
+            transform: scale(1.05); 
+        }
+
+        .product-card {
+            border: 1px solid #f7f3f3;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            justify-content: space-between; 
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-image {
+            width: 120px; 
+            height: 100px; 
+            border-radius: 5px;
+            margin: auto; 
+        }
+
+        .navbar {
+            padding: 0.5rem 1rem;
+        }
+
+        .bg-gray {
+            background-color: #e9ecee;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .info-message {
+            background-color: #e7f3fe;
+            border-left: 6px solid #0a518b;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        img {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+        <h1>Árukészlet</h1>
+        <p>Minden, olcsón!</p>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" >Home</a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../Feltoltes/index.html">Termékek Feltöltése</a>
+              </li>
+              <a class="nav-link" href="../Register/register.html">Sing Up</a>
+              
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Search">
+              <button class="btn btn-primary" type="button">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+
+    <div class="container mt-5">
+        <h2>Termékek</h2>
+        <div class="info-message">
+            Fedezze fel legújabb ajánlatainkat! Minden termékünkhöz részletes leírás és vásárlási lehetőség kapcsolódik.
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1717295248230-93ea71f48f92?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRlbGV2aXNpb258ZW58MHx8MHx8fDA%3D" alt="Samsung QE43Q60DAU" class="product-image">
+                    <h3>TV & Otthoni Szórakoztatás</h3>
+                    
+                    <button class="btn bg-info" type="button">Katt ide!</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="product-card">
+                    <img src="https://pcpult.hu/galeria/2020/10/13/iphone-12.jpg" alt="Sencor STM 362" class="product-image">
+                    <h3>Készülékek</h3>
+                    
+                    <button class="btn bg-info" type="button">Katt ide!</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="product-card">
+                    <img src="https://tesztarena.hu/wp-content/uploads/2024/10/tronsmart-mirtune-s100-okos-bluetooth-hangszoro-bemutato-komoly-hangrendszer-valtoztathato-hangzas-es-rgb.jpg"  class="product-image">
+                    <h3>Hangtechnikák</h3>
+                    
+                    <button class="btn bg-info" type="button">Katt ide!</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="product-card">
+                    <img src="https://img.freepik.com/free-photo/still-life-books-versus-technology_23-2150062920.jpg" class="product-image" >
+                    <h3>Számítógép perifériák</h3>
+                    
+                    <button class="btn bg-info" type="button">Katt ide!</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="product-card">
+                    <img src="https://kitchenaid-shop.hu/wp-content/uploads/5ksm175psejx-robotgep-boroka-szinu-eletkep-pitevel.webp" alt="Xiaomi Redmi Note 11 Pro" class="product-image">
+                    <h3>Konyhai gépek</h3>
+                    
+                    <button class="btn bg-info" type="button">Katt ide!</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="product-card">
+                    <img src="https://cdn.thewirecutter.com/wp-content/media/2024/07/wifirouters-2048px-3591-3x2-1-1.jpg?auto=webp&quality=75&crop=1:1,smart&width=1024" alt="LAMAX LM15000FC" class="product-image">
+                    <h3>Hálózatépítés</h3>
+                    
+                    <button class="btn bg-info" type="button">Katt ide!</button>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <footer class="footer mt-5">
+        <p>&copy; 2024 Árukereső. Minden jog fenntartva.</p>
+    </footer>
+</body>
+</html>
+
