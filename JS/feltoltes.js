@@ -1,49 +1,51 @@
-// Az űrlap kezelése és a termék hozzáadása
 document.getElementById('add-product-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     // Mezők értékeinek lekérése
-    const nev = document.getElementById('product-nev').value;
-    const ar = document.getElementById('product-ar').value;
-    const mennyiseg = document.getElementById('product-mennyiseg').value;
-    const kategoria = document.getElementById('product-kategoria').value;
-    const keppInput = document.getElementById('product-kepp');
-    const keppFile = keppInput.files[0];
+    const name = document.getElementById('product-name').value;
+    const price = document.getElementById('product-price').value;
+    const quantity = document.getElementById('product-quantity').value;
+    const imageInput = document.getElementById('product-image');
+    const imageFile = imageInput.files[0];
 
     // Ellenőrzés
-    if (nev && ar && mennyiseg && kategoria && keppFile) {
+    if (name && price && quantity && imageFile) {
         const productList = document.getElementById('product-list');
-        const noProductsMessage = document.getElementById('no-products');
 
-        // Alapértelmezett üzenet eltávolítása
-        if (noProductsMessage) {
-            noProductsMessage.remove();
-        }
+        // Új termékkártya létrehozása
+        const productCard = document.createElement('div');
+        productCard.classList.add('col-md-4');
 
-        // Új listatétel létrehozása
-        const newProduct = document.createElement('li');
-        newProduct.classList.add('product-item');
+        const card = document.createElement('div');
+        card.classList.add('card');
+        productCard.appendChild(card);
 
-        // Kép megjelenítése
+        // Kép betöltése
         const reader = new FileReader();
         reader.onload = function(e) {
             const img = document.createElement('img');
             img.src = e.target.result;
-            img.alt = nev;
-            img.style.width = '200px';
-            img.style.height = '200px';
-            img.style.objectFit = 'cover';
-            newProduct.appendChild(img);
+            img.classList.add('card-img-top');
+            img.alt = name;
+            card.appendChild(img);
         };
-        reader.readAsDataURL(keppFile);
+        reader.readAsDataURL(imageFile);
 
         // Termékadatok hozzáadása
-        const productInfo = document.createElement('p');
-        productInfo.textContent = `${nev} - ${kategoria} - ${ar} HUF - ${mennyiseg} db`;
-        newProduct.appendChild(productInfo);
+        const cardBody = document.createElement('div');
+        cardBody.classList.add('card-body');
+        const productInfo = document.createElement('h5');
+        productInfo.classList.add('card-title');
+        productInfo.textContent = name;
+        cardBody.appendChild(productInfo);
 
-        // Terméklista frissítése
-        productList.appendChild(newProduct);
+        const productDetails = document.createElement('p');
+        productDetails.classList.add('card-text');
+        productDetails.textContent = `Ár: ${price} HUF | Mennyiség: ${quantity}`;
+        cardBody.appendChild(productDetails);
+
+        card.appendChild(cardBody);
+        productList.appendChild(productCard);
 
         // Űrlap mezők ürítése
         document.getElementById('add-product-form').reset();
