@@ -1,4 +1,4 @@
-//
+//Az űrlap beküldése előtt eseményfigyelő
 
 document.getElementById('add-product-form').addEventListener('submit', function(event) {
     event.preventDefault();
