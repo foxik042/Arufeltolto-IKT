@@ -3,15 +3,15 @@ document.getElementById('add-product-form').addEventListener('submit', function(
     event.preventDefault();
 
     // Mezők értékeinek lekérése
-    const name = document.getElementById('product-name').value;
-    const price = document.getElementById('product-price').value;
-    const quantity = document.getElementById('product-quantity').value;
-    const category = document.getElementById('product-category').value;
-    const imageInput = document.getElementById('product-image');
-    const imageFile = imageInput.files[0];
+    const nev = document.getElementById('product-nev').value;
+    const ar = document.getElementById('product-ar').value;
+    const mennyiseg = document.getElementById('product-mennyiseg').value;
+    const kategoria = document.getElementById('product-kategoria').value;
+    const keppInput = document.getElementById('product-kepp');
+    const keppFile = keppInput.files[0];
 
     // Ellenőrzés
-    if (name && price && quantity && category && imageFile) {
+    if (nev && ar && mennyiseg && kategoria && keppFile) {
         const productList = document.getElementById('product-list');
         const noProductsMessage = document.getElementById('no-products');
 
@@ -29,17 +29,17 @@ document.getElementById('add-product-form').addEventListener('submit', function(
         reader.onload = function(e) {
             const img = document.createElement('img');
             img.src = e.target.result;
-            img.alt = name;
+            img.alt = nev;
             img.style.width = '200px';
             img.style.height = '200px';
             img.style.objectFit = 'cover';
             newProduct.appendChild(img);
         };
-        reader.readAsDataURL(imageFile);
+        reader.readAsDataURL(keppFile);
 
         // Termékadatok hozzáadása
         const productInfo = document.createElement('p');
-        productInfo.textContent = `${name} - ${category} - ${price} HUF - ${quantity} db`;
+        productInfo.textContent = `${nev} - ${kategoria} - ${ar} HUF - ${mennyiseg} db`;
         newProduct.appendChild(productInfo);
 
         // Terméklista frissítése
